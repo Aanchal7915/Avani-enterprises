@@ -241,8 +241,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      123 Business Park, Sector 15<br />
-                      Gurgaon, Haryana 122001<br />
+                      F-145, Gurgaon Green EMAAR<br />
+                      Gurugram-124001<br />
                       India
                     </p>
                   </div>
@@ -255,13 +255,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Numbers</h3>
                     <p className="text-gray-600">
-                      <a href="tel:+919876543210" className="hover:text-blue-600 transition-colors">
-                        +91 98765 43210
-                      </a>
-                    </p>
-                    <p className="text-gray-600">
-                      <a href="tel:+919876543211" className="hover:text-blue-600 transition-colors">
-                        +91 98765 43211
+                      <a href="tel:+919253625099" className="hover:text-blue-600 transition-colors">
+                        +91 9253625099
                       </a>
                     </p>
                   </div>
@@ -274,13 +269,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Address</h3>
                     <p className="text-gray-600">
-                      <a href="mailto:hello@avanienterprises.com" className="hover:text-blue-600 transition-colors">
-                        hello@avanienterprises.com
-                      </a>
-                    </p>
-                    <p className="text-gray-600">
-                      <a href="mailto:support@avanienterprises.com" className="hover:text-blue-600 transition-colors">
-                        support@avanienterprises.com
+                      <a href="mailto:kapilatavanienterprises@gmail.com" className="hover:text-blue-600 transition-colors">
+                        kapilatavanienterprises@gmail.com
                       </a>
                     </p>
                   </div>

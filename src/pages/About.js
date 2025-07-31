@@ -37,41 +37,6 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Rahul Sharma",
-      position: "CEO & Founder",
-      credentials: "IIT Delhi, IIM Ahmedabad",
-      experience: "12+ years in digital marketing",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-      bio: "Former Google Ads specialist with expertise in growth marketing and brand strategy."
-    },
-    {
-      name: "Priya Patel",
-      position: "CTO & Technical Lead",
-      credentials: "IIT Bombay, Stanford University",
-      experience: "10+ years in software development",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face",
-      bio: "Full-stack developer with deep expertise in AI/ML and scalable architecture."
-    },
-    {
-      name: "Amit Kumar",
-      position: "Head of Strategy",
-      credentials: "IIM Bangalore, McKinsey Alumni",
-      experience: "8+ years in business strategy",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-      bio: "Strategic consultant with proven track record in digital transformation."
-    },
-    {
-      name: "Neha Singh",
-      position: "Creative Director",
-      credentials: "NID Ahmedabad, Parsons School",
-      experience: "7+ years in creative design",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
-      bio: "Award-winning designer with expertise in brand identity and user experience."
-    }
-  ];
-
   const achievements = [
     {
       number: "150+",
@@ -189,40 +154,105 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Leadership Team
+              Meet Our Leadership
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced professionals from top institutions with proven track records in 
-              digital transformation and business growth.
+              Experienced professional with proven track record in business transformation and startup consulting.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="p-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-600 font-medium text-center mb-2">
-                    {member.position}
-                  </p>
-                  <p className="text-sm text-gray-600 text-center mb-2">
-                    {member.credentials}
-                  </p>
-                  <p className="text-sm text-gray-500 text-center mb-4">
-                    {member.experience}
-                  </p>
-                  <p className="text-gray-600 text-sm text-center leading-relaxed">
-                    {member.bio}
-                  </p>
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection animation="fadeInUp" delay={0.2}>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <img
+                      src="/kapil_khandelwal.jpg"
+                      alt="Kapil Khandelwal"
+                      className="w-full h-64 md:h-full object-cover"
+                    />
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Kapil Khandelwal
+                    </h3>
+                    <p className="text-blue-600 font-medium text-lg mb-4">
+                      CEO - Avani Enterprises
+                    </p>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      Kapil Khandelwal is a distinguished Business and Startup Consultant with over a decade of experience 
+                      in transforming businesses and nurturing startups to success. As the CEO of Avani Enterprises, 
+                      he leads a team of professionals dedicated to delivering innovative digital solutions and strategic 
+                      growth strategies.
+                    </p>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Business & Startup Consultant</h4>
+                          <p className="text-gray-600 text-sm">
+                            Expert guidance for businesses and startups in scaling operations, market expansion, and strategic planning.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Active Investor</h4>
+                          <p className="text-gray-600 text-sm">
+                            Strategic investments in Gyan Ganga Marketing Co and 2 promising startups, contributing to their growth and success.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Author & Thought Leader</h4>
+                          <p className="text-gray-600 text-sm">
+                            Writer of "The Startup Summary Book" 📚, sharing insights and strategies for startup success and business growth.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                      <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-2xl font-bold text-blue-600 mb-1">10+</div>
+                        <div className="text-sm text-gray-600">Years Experience</div>
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-2xl font-bold text-purple-600 mb-1">50+</div>
+                        <div className="text-sm text-gray-600">Businesses Transformed</div>
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-2xl font-bold text-green-600 mb-1">3</div>
+                        <div className="text-sm text-gray-600">Active Investments</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Business Strategy
+                      </span>
+                      <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Startup Consulting
+                      </span>
+                      <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Investment
+                      </span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Author
+                      </span>
+                      <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Digital Marketing
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </AnimatedSection>
           </div>
         </div>
       </section>

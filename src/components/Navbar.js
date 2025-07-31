@@ -33,10 +33,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">Avani Enterprises</span>
+            <img 
+              src="/avani_enter_logo.png" 
+              alt="Avani Enterprises" 
+              className="h-10 w-auto"
+            />
+            {/* <span className="text-xl font-bold text-gray-900">Avani Enterprises</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,11 +61,11 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919253625099"
               className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
             >
               <Phone size={16} />
-              <span className="text-sm font-medium">+91 98765 43210</span>
+              <span className="text-sm font-medium">+91 9253625099</span>
             </a>
             <Link
               to="/contact"
@@ -104,11 +106,11 @@ const Navbar = () => {
               ))}
               <div className="pt-4 border-t border-gray-200">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919253625099"
                   className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600"
                 >
                   <Phone size={16} />
-                  <span className="text-sm font-medium">+91 98765 43210</span>
+                  <span className="text-sm font-medium">+91 9253625099</span>
                 </a>
                 <Link
                   to="/contact"

@@ -12,26 +12,28 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-xl font-bold">Avani Enterprises</span>
+              <img 
+                src="/Untitled-design-1.png" 
+                alt="Avani Enterprises" 
+                className="h-10 w-auto"
+              />
+              {/* <span className="text-xl font-bold">Avani Enterprises</span> */}
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               We transform brands through strategic digital marketing, innovative technology solutions, 
               and data-driven growth strategies that deliver measurable ROI.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/avani-enterprises-india/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/avanienterprises.branding/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/avanienterprises" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="https://www.facebook.com/avanienterprises" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook size={20} />
               </a>
             </div>
@@ -99,14 +101,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <span className="text-gray-300 hover:text-white transition-colors">
                   Careers
-                </a>
+                </span>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <span className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
-                </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -119,22 +121,22 @@ const Footer = () => {
                 <MapPin size={20} className="text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    123 Business Park, Sector 15<br />
-                    Gurgaon, Haryana 122001<br />
+                    F-145, Gurgaon Green EMAAR<br />
+                    Gurugram-124001<br />
                     India
                   </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-blue-400 flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919253625099" className="text-gray-300 hover:text-white transition-colors">
+                  +91 9253625099
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-blue-400 flex-shrink-0" />
-                <a href="mailto:hello@avanienterprises.com" className="text-gray-300 hover:text-white transition-colors">
-                  hello@avanienterprises.com
+                <a href="mailto:kapilatavanienterprises@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                  kapilatavanienterprises@gmail.com
                 </a>
               </div>
             </div>
@@ -148,15 +150,12 @@ const Footer = () => {
               © {currentYear} Avani Enterprises. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <span className="text-gray-400 text-sm">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </span>
+              <span className="text-gray-400 text-sm">
                 Cookie Policy
-              </a>
+              </span>
             </div>
           </div>
         </div>

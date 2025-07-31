@@ -19,8 +19,8 @@ const App = () => {
       <div className="min-h-screen bg-white">
         <Navbar />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
+      <Routes>
+      <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/case-studies" element={<CaseStudies />} />
@@ -28,7 +28,7 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
-          </Routes>
+      </Routes>
         </main>
         <Footer />
       </div>
