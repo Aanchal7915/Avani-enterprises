@@ -316,7 +316,7 @@ const Services = () => {
               </p>
               <div className="flex items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face"
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
                   alt="Client"
                   className="w-12 h-12 rounded-full mr-4"
                 />
