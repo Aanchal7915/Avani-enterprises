@@ -227,7 +227,7 @@ const Home = () => {
                 </AnimatedSection>
               </div>
             </AnimatedSection>
-            {/* <AnimatedSection animation="fadeInRight" delay={0.8}>
+            <AnimatedSection animation="fadeInRight" delay={0.8} className="hidden lg:block">
               <div className="relative">
                 <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="grid grid-cols-2 gap-4">
@@ -241,7 +241,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </AnimatedSection> */}
+            </AnimatedSection>
           </div>
         </div>
       </section>

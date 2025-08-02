@@ -1021,10 +1021,10 @@ const CourseDetail = () => {
               Enroll Now - {course.price}
             </a>
             <Link
-              to="/contact"
+              to="/get-consultation"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              Get Free Consultation
+              Get Consultation
             </Link>
           </div>
         </div>
