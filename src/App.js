@@ -1,7 +1,7 @@
 
 import './App.css';
 import './index.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,8 +13,8 @@ import Blog from './pages/Blog';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import ScrollToTop from './components/ScrollToTop';
-import GetConsultation from './pages/GetConsultation';
-
+// import GetConsultation from './pages/GetConsultation';
+import NotFound from './pages/NotFound';
 const App = () => {
   return (
 
@@ -33,7 +33,9 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
-            <Route path="/get-consultation" element={<GetConsultation />} />
+            {/* <Route path="/get-consultation" element={<GetConsultation />} /> */}
+            <Route path="/not-found" element={<NotFound/>} />
+            <Route path="*" element={<Navigate to="/not-found"/>} />
           </Routes>
         </main>
         <Footer />

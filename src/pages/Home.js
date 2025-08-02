@@ -442,12 +442,14 @@ const Home = () => {
             Let's discuss how we can help you achieve your growth goals and build a powerful digital presence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/get-consultation"
+            <a
+              target='_blank'
+              rel="noopener noreferrer"
+              href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Get Consultation
-            </Link>
+            </a>
             <a
               href="tel:+919253625099"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"

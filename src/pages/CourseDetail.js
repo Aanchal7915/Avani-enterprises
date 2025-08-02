@@ -793,13 +793,13 @@ const CourseDetail = () => {
                   <Play className="mr-2 w-5 h-5" />
                   Enroll Now - {course.price}
                 </a>
-                <Link
+                {/* <Link
                   to="/get-consultation"
                   className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center justify-center"
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
                   Get Consultation
-                </Link>
+                </Link> */}
               </div>
             </div>
             
@@ -1020,12 +1020,14 @@ const CourseDetail = () => {
             >
               Enroll Now - {course.price}
             </a>
-            <Link
-              to="/get-consultation"
+            <a
+              href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
+               target='_blank'
+              rel="noopener noreferrer"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Get Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </section>
