@@ -10,6 +10,7 @@ import {
 import AnimatedSection from '../components/AnimatedSection';
 
 const Contact = () => {
+  const whatsappNumber = '919253625099';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,7 +43,7 @@ const Contact = () => {
       `Project Details: ${formData.message}`;
 
     // WhatsApp number (replace with your business number if needed)
-    const whatsappNumber = '919253625099'; // without + sign
+     // without + sign
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -280,7 +281,7 @@ const Contact = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919253625099"
                     className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
                   >
                     <Phone className="w-4 h-4 mr-2" />

@@ -350,7 +350,7 @@ const About = () => {
               Get Started Today
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+919253625099"
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200"
             >
               Call Us Now
