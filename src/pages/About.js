@@ -78,78 +78,6 @@ const About = () => {
           </AnimatedSection>
         </div>
       </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection animation="fadeInLeft" delay={0.2}>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission
-                </h2>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  To empower businesses with cutting-edge digital solutions that drive growth, 
-                  enhance brand presence, and deliver measurable ROI. We believe in building 
-                  long-term partnerships based on trust, innovation, and results.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Our approach combines data-driven insights with creative excellence to create 
-                  digital experiences that not only look great but also perform exceptionally well.
-                </p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection animation="fadeInRight" delay={0.4}>
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-lg leading-relaxed">
-                  To be the leading digital transformation partner for businesses across India, 
-                  known for our innovative solutions, exceptional service, and proven results.
-                </p>
-                <div className="mt-6 flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3" />
-                  <span className="text-lg">Data-Driven Decisions</span>
-                </div>
-                <div className="mt-4 flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3" />
-                  <span className="text-lg">Innovation at Core</span>
-                </div>
-                <div className="mt-4 flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3" />
-                  <span className="text-lg">Client Success Focus</span>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do and every decision we make.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-6">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -256,6 +184,79 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection animation="fadeInLeft" delay={0.2}>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Our Mission
+                </h2>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  To empower businesses with cutting-edge digital solutions that drive growth, 
+                  enhance brand presence, and deliver measurable ROI. We believe in building 
+                  long-term partnerships based on trust, innovation, and results.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Our approach combines data-driven insights with creative excellence to create 
+                  digital experiences that not only look great but also perform exceptionally well.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInRight" delay={0.4}>
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+                <p className="text-lg leading-relaxed">
+                  To be the leading digital transformation partner for businesses across India, 
+                  known for our innovative solutions, exceptional service, and proven results.
+                </p>
+                <div className="mt-6 flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-3" />
+                  <span className="text-lg">Data-Driven Decisions</span>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-3" />
+                  <span className="text-lg">Innovation at Core</span>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-3" />
+                  <span className="text-lg">Client Success Focus</span>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Core Values
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The principles that guide everything we do and every decision we make.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-6">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      
 
       {/* Achievements Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
