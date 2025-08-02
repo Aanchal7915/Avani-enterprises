@@ -211,10 +211,10 @@ const Blog = () => {
                         <User className="w-4 h-4 text-gray-400 mr-2" />
                         <span className="text-sm text-gray-600">{post.author}</span>
                       </div>
-                      <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                      {/* <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
                         Read More
                         <ArrowRight className="ml-2 w-4 h-4" />
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </article>

@@ -166,7 +166,7 @@ const Home = () => {
       position: "CEO, TechStart India",
       content: "Avani Enterprises transformed our digital presence completely. Our website traffic increased by 300% and conversions by 150% within 6 months.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Rajesh Kumar",
@@ -232,7 +232,7 @@ const Home = () => {
                 </AnimatedSection>
               </div>
             </AnimatedSection>
-            <AnimatedSection animation="fadeInRight" delay={0.8}>
+            {/* <AnimatedSection animation="fadeInRight" delay={0.8}>
               <div className="relative">
                 <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="grid grid-cols-2 gap-4">
@@ -246,7 +246,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
         </div>
       </section>

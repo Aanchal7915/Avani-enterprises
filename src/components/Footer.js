@@ -100,16 +100,7 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <span className="text-gray-300 hover:text-white transition-colors">
-                  Careers
-                </span>
-              </li>
-              <li>
-                <span className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
-                </span>
-              </li>
+             
             </ul>
           </div>
 
