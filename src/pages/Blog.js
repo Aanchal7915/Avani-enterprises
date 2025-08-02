@@ -66,7 +66,7 @@ const Blog = () => {
       readTime: "6 min read",
       category: "ai-technology",
       tags: ["AI", "Digital Marketing", "Technology"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecadf8a?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       views: 1890,
       featured: false
     },
@@ -108,7 +108,7 @@ const Blog = () => {
       readTime: "9 min read",
       category: "digital-marketing",
       tags: ["Content Marketing", "ROI", "Analytics"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       views: 2100,
       featured: false
     },
@@ -344,10 +344,10 @@ const Blog = () => {
                         </span>
                       ))}
                     </div>
-                    <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                    {/* <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
                       Read More
                       <ArrowRight className="ml-2 w-4 h-4" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </article>
