@@ -60,7 +60,7 @@ const Navbar = () => {
 
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+919253625099"
               className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
