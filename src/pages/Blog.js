@@ -10,9 +10,27 @@ import {
   Share2
 } from 'lucide-react';
 
+// Simple toast component
+const Toast = ({ message, type, onClose }) => (
+  <div
+    className={`fixed top-8 right-8 z-50 px-6 py-4 rounded-lg shadow-lg text-white font-semibold transition-all duration-300 ${
+      type === "success"
+        ? "bg-green-600"
+        : "bg-red-600"
+    }`}
+    role="alert"
+  >
+    {message}
+    <button className="ml-4 text-white font-bold" onClick={onClose}>×</button>
+  </div>
+);
+
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [toast, setToast] = useState(null);
+  const [isSending, setIsSending] = useState(false);
 
   const categories = [
     { id: 'all', name: 'All Posts' },
@@ -120,6 +138,55 @@ const Blog = () => {
 
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
+
+  // Newsletter subscribe handler
+  const handleNewsletterSubscribe = async () => {
+    const toEmail = process.env.REACT_APP_NEWSLETTER_EMAIL;
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+
+    if (!newsletterEmail) {
+      setToast({ message: "Please enter your email.", type: "error" });
+      setTimeout(() => setToast(null), 3000);
+      return;
+    }
+    if (!toEmail || !serviceId || !templateId || !userId) {
+      setToast({ message: "Email service is not configured.", type: "error" });
+      setTimeout(() => setToast(null), 3000);
+      return;
+    }
+
+    setIsSending(true);
+
+    try {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: userId,
+          template_params: {
+            to_email: toEmail,
+            subscriber_email: newsletterEmail
+          }
+        })
+      });
+      if (res.ok) {
+        setToast({ message: "Subscription email sent successfully!", type: "success" });
+        setNewsletterEmail("");
+        setTimeout(() => setToast(null), 3000);
+      } else {
+        setToast({ message: "Failed to send subscription email.", type: "error" });
+        setTimeout(() => setToast(null), 3000);
+      }
+    } catch (err) {
+      setToast({ message: "Failed to send subscription email.", type: "error" });
+      setTimeout(() => setToast(null), 3000);
+    }
+    setIsSending(false);
+  };
 
   return (
     <div className="pt-20">
@@ -309,17 +376,42 @@ const Blog = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
+              value={newsletterEmail}
+              onChange={e => setNewsletterEmail(e.target.value)}
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
+              disabled={isSending}
             />
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
-              Subscribe
+            <button
+              className={`bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center ${isSending ? "opacity-60 cursor-not-allowed" : "hover:bg-gray-100"}`}
+              onClick={handleNewsletterSubscribe}
+              type="button"
+              disabled={isSending}
+            >
+              {isSending ? (
+                <>
+                  <svg className="animate-spin h-5 w-5 mr-2 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Subscribe"
+              )}
             </button>
           </div>
           <p className="text-sm text-blue-200 mt-4">
             No spam, unsubscribe at any time.
           </p>
         </div>
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={() => setToast(null)}
+          />
+        )}
       </section>
 
       {/* Popular Topics */}
@@ -381,4 +473,4 @@ const Blog = () => {
   );
 };
 
-export default Blog; 
+export default Blog;

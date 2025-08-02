@@ -216,7 +216,7 @@ const Home = () => {
                       to="/contact"
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center justify-center"
                     >
-                      Get Consultation
+                      Get Started
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>
                     <Link to="/courses" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200 flex items-center justify-center">

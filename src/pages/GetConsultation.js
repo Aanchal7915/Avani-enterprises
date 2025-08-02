@@ -6,10 +6,10 @@ const GetConsultation = () => {
     email: "",
     phone: ""
   });
+  const [isPaying, setIsPaying] = useState(false);
 
   // Get Razorpay key and amount from environment variables
   const razorpayKey = process.env.REACT_APP_RAZORPAY_KEY;
-  // Remove trailing underscore from env variable name
   const amount = Number(process.env.REACT_APP_RAZORPAY_CONSULTATION_AMOUNT_) || 50000; // fallback to 50000 paise (₹500)
 
   const handleInputChange = (e) => {
@@ -18,6 +18,7 @@ const GetConsultation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsPaying(true);
 
     const options = {
       key: razorpayKey,
@@ -25,7 +26,9 @@ const GetConsultation = () => {
       currency: "INR",
       name: "Avani Enterprises",
       description: "Consultation Fee",
+      image: "/logo192.png",
       handler: function (response) {
+        setIsPaying(false);
         alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
       },
       prefill: {
@@ -34,7 +37,10 @@ const GetConsultation = () => {
         contact: formData.phone
       },
       theme: {
-        color: "#6366f1"
+        color: "#7c3aed"
+      },
+      modal: {
+        ondismiss: () => setIsPaying(false)
       }
     };
 
@@ -55,25 +61,39 @@ const GetConsultation = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+      
     >
       {/* Animated gradient blobs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-blob1"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-400 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-blob2"></div>
-      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-400 opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob3"></div>
-      <div className="relative z-10 w-full max-w-2xl mx-auto">
-        <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl px-8 py-10 md:py-14 md:px-14 animate-fade-in-up transition-all duration-700">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 drop-shadow-lg transition-all duration-500">
-            Book Your Expert Consultation
-          </h2>
-          <p className="text-lg text-gray-700 text-center mb-8">
-            Unlock business growth with a 1:1 session with our experts. Fill in your details and pay securely to reserve your slot.
-          </p>
-          <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob1"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-400 opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob2"></div>
+      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-400 opacity-10 rounded-full mix-blend-multiply filter blur-3xl animate-blob3"></div>
+      <div className="mt-[100px] mb-[20px] relative w-full max-w-xl mx-auto">
+        <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl px-8 py-10 md:py-14 md:px-14 animate-fade-in-up border border-gray-100">
+          <div className="flex flex-col items-center mb-8">
+           
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 drop-shadow-lg">
+              Book Your Expert Consultation
+            </h2>
+            <p className="text-base md:text-lg text-gray-700 text-center font-medium">
+              Unlock business growth with a{" "}
+              <span className="font-semibold text-purple-600">1:1 session</span> with
+              our senior consultants.
+              <br />
+              <span className="text-gray-500 text-sm">
+                Fill in your details and pay securely to reserve your slot.
+              </span>
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="space-y-7">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <label className="block text-gray-700 mb-2 font-medium" htmlFor="name">
-                  Name *
+                <label
+                  className="block text-gray-700 mb-2 font-semibold"
+                  htmlFor="name"
+                >
+                  Full Name{" "}
+                  <span className="text-pink-500">*</span>
                 </label>
                 <input
                   id="name"
@@ -82,13 +102,18 @@ const GetConsultation = () => {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-                  placeholder="Enter your name"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition placeholder-gray-400 bg-gray-50"
+                  placeholder="Enter your full name"
+                  autoComplete="name"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-gray-700 mb-2 font-medium" htmlFor="email">
-                  Email *
+                <label
+                  className="block text-gray-700 mb-2 font-semibold"
+                  htmlFor="email"
+                >
+                  Email{" "}
+                  <span className="text-pink-500">*</span>
                 </label>
                 <input
                   id="email"
@@ -97,14 +122,19 @@ const GetConsultation = () => {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-                  placeholder="Enter your email"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition placeholder-gray-400 bg-gray-50"
+                  placeholder="Enter your email address"
+                  autoComplete="email"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-gray-700 mb-2 font-medium" htmlFor="phone">
-                Phone Number *
+              <label
+                className="block text-gray-700 mb-2 font-semibold"
+                htmlFor="phone"
+              >
+                Phone Number{" "}
+                <span className="text-pink-500">*</span>
               </label>
               <input
                 id="phone"
@@ -113,20 +143,65 @@ const GetConsultation = () => {
                 required
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 transition placeholder-gray-400 bg-gray-50"
                 placeholder="Enter your phone number"
+                autoComplete="tel"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+              disabled={isPaying}
+              className={`w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center transition-all duration-300 ${
+                isPaying
+                  ? "opacity-60 cursor-not-allowed"
+                  : "hover:scale-105 hover:shadow-2xl"
+              }`}
             >
-              Pay ₹{(amount / 100).toLocaleString("en-IN")} & Book Consultation
+              {isPaying ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 mr-2 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8z"
+                    ></path>
+                  </svg>
+                  Redirecting to Payment...
+                </>
+              ) : (
+                <>Pay ₹{(amount / 100).toLocaleString("en-IN")} & Book Consultation</>
+              )}
             </button>
           </form>
-          <div className="mt-8 text-center text-gray-600 text-sm animate-fade-in transition-all duration-700">
-            <span className="inline-block bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 px-4 py-2 rounded-lg shadow">
-              100% secure payment via Razorpay. You’ll receive a confirmation email after booking.
+          <div className="mt-8 text-center text-gray-600 text-sm animate-fade-in">
+            <span className="inline-block bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 px-4 py-2 rounded-lg shadow font-medium">
+              100% secure payment via Razorpay. You’ll receive a confirmation email
+              after booking.
+            </span>
+          </div>
+          <div className="mt-6 text-center text-xs text-gray-400">
+            <span>
+              By booking, you agree to our{" "}
+              <a
+                href="/terms"
+                className="underline hover:text-purple-600 transition-colors"
+              >
+                Terms & Conditions
+              </a>
+              .
             </span>
           </div>
         </div>
