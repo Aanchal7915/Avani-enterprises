@@ -224,10 +224,10 @@ const Home = () => {
                       Get Started Today
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>
-                    <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200 flex items-center justify-center">
+                    <Link to="/courses" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200 flex items-center justify-center">
                       <Play className="mr-2 w-5 h-5" />
-                      Watch Our Story
-                    </button>
+                      Explore Our Courses
+                    </Link>
                   </div>
                 </AnimatedSection>
               </div>

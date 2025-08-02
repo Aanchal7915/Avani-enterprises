@@ -30,23 +30,29 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setIsLoading(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
-      });
-    }, 2000);
+
+    // Construct the WhatsApp message
+    const message =
+      `Hello, my name is ${formData.name}.\n` +
+      `Email: ${formData.email}\n` +
+      (formData.phone ? `Phone: ${formData.phone}\n` : '') +
+      (formData.company ? `Company: ${formData.company}\n` : '') +
+      (formData.service ? `Service Interested In: ${formData.service}\n` : '') +
+      `Project Details: ${formData.message}`;
+
+    // WhatsApp number (replace with your business number if needed)
+    const whatsappNumber = '919253625099'; // without + sign
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
   };
 
   const services = [
@@ -88,23 +94,10 @@ const Contact = () => {
                 Send Us a Message
               </h2>
               
-              {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-green-900 mb-2">
-                    Thank You!
-                  </h3>
-                  <p className="text-green-700 mb-4">
-                    Your message has been sent successfully. We'll get back to you within 24 hours.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
-                  >
-                    Send Another Message
-                  </button>
-                </div>
-              ) : (
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                  Send Us a Message
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -208,23 +201,13 @@ const Contact = () => {
                   
                   <button
                     type="submit"
-                    disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center justify-center"
                   >
-                    {isLoading ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending Message...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2 w-5 h-5" />
-                        Send Message
-                      </>
-                    )}
+                    <Send className="mr-2 w-5 h-5" />
+                    Send Message via WhatsApp
                   </button>
                 </form>
-              )}
+              </div>
             </div>
 
             {/* Contact Information */}
@@ -420,4 +403,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
