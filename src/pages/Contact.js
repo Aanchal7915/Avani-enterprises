@@ -287,7 +287,7 @@ const Contact = () => {
                     Call Now
                   </a>
                   <a
-                    href="https://wa.me/919876543210"
+                    href={`https://wa.me/${whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"

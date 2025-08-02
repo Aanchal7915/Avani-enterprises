@@ -242,7 +242,7 @@ const Courses = () => {
       originalPrice: "₹50,000",
       rating: 4.9,
       students: 1650,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecadf8a?w=400&h=300&fit=crop",
+      image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       features: [
         "Certificate after completion",
         "Free AI tool assistance (Hindi & English)",

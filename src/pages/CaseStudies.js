@@ -90,7 +90,7 @@ const CaseStudies = () => {
       },
       duration: "4 months",
       team: "3 AI developers, 1 UX designer",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecadf8a?w=600&h=400&fit=crop",
+      image:  "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop",
       technologies: ["Python", "TensorFlow", "NLP", "AWS", "Dialogflow"]
     },
     {
