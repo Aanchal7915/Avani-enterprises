@@ -61,14 +61,14 @@ const GetConsultation = () => {
 
   return (
     <div
-      className="pt-20 flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 py-20 w-full"
+      className="flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 py-20 w-full"
       
     >
       {/* Animated gradient blobs */}
       {/* <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob1"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-400 opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob2"></div>
       <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-400 opacity-10 rounded-full mix-blend-multiply filter blur-3xl animate-blob3"></div> */}
-      <div className="mt-[100px] mb-[20px] w-full max-w-xl mx-auto">
+      <div className="mt-3 mb-[20px] w-full max-w-xl mx-auto">
         <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl px-8 py-10 md:py-14 md:px-14 animate-fade-in-up border border-gray-100">
           <div className="flex flex-col items-center mb-8">
            
