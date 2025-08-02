@@ -13,6 +13,7 @@ import Blog from './pages/Blog';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import ScrollToTop from './components/ScrollToTop';
+import GetConsultation from './pages/GetConsultation';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
+            <Route path="/get-consultation" element={<GetConsultation />} />
           </Routes>
         </main>
         <Footer />

@@ -386,10 +386,10 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              to="/get-conusltation"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
-              Get Free Consultation
+              Get Consultation
             </Link>
             <a
               href="tel:+919876543210"
