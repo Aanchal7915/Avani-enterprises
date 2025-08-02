@@ -54,7 +54,8 @@ const Courses = () => {
       ],
       instructor: "Priya Sharma",
       level: "Beginner to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAxEmxe6Ri9Et"
     },
     {
       id: 2,
@@ -76,7 +77,8 @@ const Courses = () => {
       ],
       instructor: "Rahul Kumar",
       level: "Beginner to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_Qj5b7hCG3D5e7H"
     },
     {
       id: 3,
@@ -98,7 +100,8 @@ const Courses = () => {
       ],
       instructor: "Amit Patel",
       level: "Beginner to Intermediate",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAy1wWQmdhynn"
     },
     {
       id: 4,
@@ -120,7 +123,8 @@ const Courses = () => {
       ],
       instructor: "Neha Singh",
       level: "Beginner to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAz7ZhqFfLcXD"
     },
     {
       id: 5,
@@ -142,7 +146,8 @@ const Courses = () => {
       ],
       instructor: "Rajesh Kumar",
       level: "Intermediate to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAzoc7SqJq6Fs"
     },
     {
       id: 6,
@@ -164,7 +169,8 @@ const Courses = () => {
       ],
       instructor: "Dr. Anjali Verma",
       level: "Beginner to Intermediate",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkB0ZuMTIzNQaF"
     },
     {
       id: 7,
@@ -186,7 +192,8 @@ const Courses = () => {
       ],
       instructor: "Vikram Singh",
       level: "Beginner to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkD0vcwaw7q9N8"
     },
     {
       id: 8,
@@ -208,7 +215,8 @@ const Courses = () => {
       ],
       instructor: "Adv. Meera Sharma",
       level: "Intermediate to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkEWaTixFjaC5x"
     },
     {
       id: 9,
@@ -230,7 +238,8 @@ const Courses = () => {
       ],
       instructor: "Dr. Priya Patel",
       level: "Beginner to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkEzYm9PTePejB"
     },
     {
       id: 10,
@@ -252,7 +261,8 @@ const Courses = () => {
       ],
       instructor: "Dr. Amit Kumar",
       level: "Intermediate to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkbfT6omfXOa6v"
     },
     {
       id: 11,
@@ -274,7 +284,8 @@ const Courses = () => {
       ],
       instructor: "Rahul Verma",
       level: "Intermediate to Advanced",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkbVQMoRjk8O3c"
     },
     {
       id: 12,
@@ -296,7 +307,8 @@ const Courses = () => {
       ],
       instructor: "Kapil Sharma",
       level: "Beginner to Intermediate",
-      language: "Hindi & English"
+      language: "Hindi & English",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkuHfTcQCXSjNZ"
     }
   ];
 
@@ -442,16 +454,15 @@ const Courses = () => {
                           View More
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
-                        <button 
-                          onClick={() => {
-                            setSelectedCourse(course);
-                            setIsPaymentModalOpen(true);
-                          }}
+                        <a
+                          href={course.paymentLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center"
                         >
                           Enroll Now
                           <ArrowRight className="ml-2 w-4 h-4" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -565,4 +576,4 @@ const Courses = () => {
   );
 };
 
-export default Courses; 
+export default Courses;

@@ -22,7 +22,7 @@ const CourseDetail = () => {
 
   // Course data - in a real app, this would come from an API
   const courseData = {
-    1: {
+        1: {
       title: "Graphic Designing and Adobe Photoshop",
       subtitle: "Master the Art of Digital Design",
       description: "Full step by step course about graphic design, Adobe Photoshop, and digital art creation with AI tools integration. Learn professional design techniques and create stunning visuals for various platforms.",
@@ -36,6 +36,7 @@ const CourseDetail = () => {
       language: "Hindi & English",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop",
       category: "Design",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAxEmxe6Ri9Et",
       features: [
         "Certificate after completion",
         "Free AI tool assistance (Hindi & English)",
@@ -91,6 +92,7 @@ const CourseDetail = () => {
       language: "Hindi & English",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       category: "Marketing",
+      paymentLink: "https://razorpay.com/payment-link/plink_Qj5b7hCG3D5e7H",
       features: [
         "Certificate after completion",
         "Free AI tool assistance (Hindi & English)",
@@ -132,6 +134,370 @@ const CourseDetail = () => {
         "Start your own agency"
       ]
     },
+    3: {
+      title: "Video Editing Course",
+      subtitle: "Master Professional Video Editing",
+      description:
+        "Master the art of video editing for YouTube, social media, and business. Learn Adobe Premiere Pro, After Effects, color grading, transitions, and more. Includes AI tools for faster editing.",
+      duration: "60 hours",
+      price: "₹19,999",
+      originalPrice: "₹25,000",
+      rating: 4.7,
+      students: 980,
+      instructor: "Amit Patel",
+      level: "Beginner to Intermediate",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
+      category: "Design",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAy1wWQmdhynn",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "MCQ test for course completion",
+        "Hands-on projects",
+        "Lifetime access to course materials"
+      ],
+      curriculum: [
+        {
+          title: "Editing Basics",
+          topics: [
+            "Cuts, trims, and transitions",
+            "Timeline management",
+            "Project organization"
+          ]
+        },
+        {
+          title: "Adobe Premiere Pro & After Effects",
+          topics: [
+            "Interface overview",
+            "Effects and transitions",
+            "Color correction and grading"
+          ]
+        },
+        {
+          title: "Audio & Export",
+          topics: [
+            "Adding music and sound effects",
+            "Voiceovers",
+            "Exporting for YouTube, Instagram, and more"
+          ]
+        },
+        {
+          title: "AI Tools for Editing",
+          topics: [
+            "AI-powered editing tools",
+            "Automation techniques"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic computer knowledge",
+        "Creative mindset",
+        "Willingness to learn"
+      ],
+      outcomes: [
+        "Edit professional videos",
+        "Use industry-standard tools",
+        "Create content for YouTube and social media",
+        "Build a strong video portfolio"
+      ]
+    },
+    4: {
+      title: "Full Stack Website Development",
+      subtitle: "Become a Full Stack Web Developer",
+      description:
+        "Become a full stack web developer. Learn HTML, CSS, JavaScript, React, Node.js, MongoDB, deployment, and more. Build real-world projects and get job-ready.",
+      duration: "120 hours",
+      price: "₹19,999",
+      originalPrice: "₹40,000",
+      rating: 4.9,
+      students: 1850,
+      instructor: "Neha Singh",
+      level: "Beginner to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
+      category: "Development",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAz7ZhqFfLcXD",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "MCQ test for course completion",
+        "Live project experience",
+        "Portfolio development"
+      ],
+      curriculum: [
+        {
+          title: "Frontend Development",
+          topics: [
+            "HTML, CSS, JavaScript",
+            "React.js",
+            "Responsive design"
+          ]
+        },
+        {
+          title: "Backend Development",
+          topics: [
+            "Node.js & Express.js",
+            "REST APIs",
+            "Authentication"
+          ]
+        },
+        {
+          title: "Database & Deployment",
+          topics: [
+            "MongoDB",
+            "Hosting & deployment",
+            "Version control (Git)"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic computer knowledge",
+        "Willingness to learn",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Build and deploy full stack web apps",
+        "Work as a web developer",
+        "Create a professional portfolio"
+      ]
+    },
+    5: {
+      title: "Android and iOS App Development",
+      subtitle: "Mobile App Development Mastery",
+      description:
+        "Learn mobile app development for both Android and iOS platforms with modern frameworks. Build, test, and deploy real-world apps.",
+      duration: "100 hours",
+      price: "₹19,999",
+      originalPrice: "₹35,000",
+      rating: 4.8,
+      students: 1450,
+      instructor: "Rajesh Kumar",
+      level: "Intermediate to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      category: "Development",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkAzoc7SqJq6Fs",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "MCQ test for course completion",
+        "Live app projects"
+      ],
+      curriculum: [
+        {
+          title: "Android Development",
+          topics: [
+            "Kotlin/Java basics",
+            "UI/UX for Android",
+            "Publishing to Play Store"
+          ]
+        },
+        {
+          title: "iOS Development",
+          topics: [
+            "Swift basics",
+            "UI/UX for iOS",
+            "Publishing to App Store"
+          ]
+        },
+        {
+          title: "Cross-Platform",
+          topics: [
+            "React Native/Flutter",
+            "APIs & backend integration"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic programming knowledge",
+        "Laptop/PC",
+        "Willingness to learn"
+      ],
+      outcomes: [
+        "Build Android/iOS apps",
+        "Deploy to app stores",
+        "Work as mobile developer"
+      ]
+    },
+    6: {
+      title: "Hospital Management Course",
+      subtitle: "Healthcare Administration & Operations",
+      description:
+        "Comprehensive hospital management course for healthcare administration and operations. Learn hospital workflows, patient management, and leadership.",
+      duration: "80 hours",
+      price: "₹19,999",
+      originalPrice: "₹30,000",
+      rating: 4.6,
+      students: 750,
+      instructor: "Dr. Anjali Verma",
+      level: "Beginner to Intermediate",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      category: "Business",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkB0ZuMTIzNQaF",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "MCQ test for course completion",
+        "Hospital workflow training"
+      ],
+      curriculum: [
+        {
+          title: "Hospital Administration",
+          topics: [
+            "Healthcare systems",
+            "Patient management",
+            "Hospital workflows"
+          ]
+        },
+        {
+          title: "Leadership & Operations",
+          topics: [
+            "Team management",
+            "Operations optimization",
+            "Quality assurance"
+          ]
+        }
+      ],
+      requirements: [
+        "12th standard completion",
+        "Interest in healthcare",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Work in hospital admin roles",
+        "Manage healthcare teams",
+        "Improve hospital operations"
+      ]
+    },
+    7: {
+      title: "Sales Manager Course",
+      subtitle: "Sales Management & Leadership",
+      description:
+        "Master sales management techniques and strategies for business growth and revenue generation. Includes leadership, negotiation, and CRM tools.",
+      duration: "60 hours",
+      price: "₹19,999",
+      originalPrice: "₹25,000",
+      rating: 4.7,
+      students: 1100,
+      instructor: "Vikram Singh",
+      level: "Beginner to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      category: "Business",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkD0vcwaw7q9N8",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "MCQ test for course completion",
+        "Leadership training"
+      ],
+      curriculum: [
+        {
+          title: "Sales Fundamentals",
+          topics: [
+            "Sales process",
+            "Lead generation",
+            "Negotiation skills"
+          ]
+        },
+        {
+          title: "Management & CRM",
+          topics: [
+            "Team leadership",
+            "CRM tools",
+            "Performance tracking"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic communication skills",
+        "Interest in sales",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Lead sales teams",
+        "Increase business revenue",
+        "Work as sales manager"
+      ]
+    },
+    8: {
+      title: "LLB and LLM Course",
+      subtitle: "Mechanical Engineering Job Oriented Course",
+      description:
+        "This course is designed for mechanical engineering graduates and students who want to build a successful career in the core mechanical sector. Get job-ready with practical training, industry-relevant curriculum, and placement assistance. Learn about production, quality, maintenance, design, and more, with a focus on real-world applications and interview preparation.",
+      duration: "100 hours",
+      price: "₹19,999",
+      originalPrice: "₹45,000",
+      rating: 4.8,
+      students: 650,
+      instructor: "Adv. Meera Sharma",
+      level: "Intermediate to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
+      category: "Business",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkbfT6omfXOa6v",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Mock interviews and interview questions",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "Industry expert sessions",
+        "Resume & interview preparation"
+      ],
+      curriculum: [
+        {
+          title: "Core Mechanical Concepts",
+          topics: [
+            "Production & manufacturing processes",
+            "Quality control & assurance",
+            "Maintenance engineering",
+            "Mechanical design basics"
+          ]
+        },
+        {
+          title: "Industry Tools & Software",
+          topics: [
+            "AutoCAD & SolidWorks basics",
+            "Industry 4.0 introduction",
+            "Practical workshop sessions"
+          ]
+        },
+        {
+          title: "Job Preparation",
+          topics: [
+            "Resume building",
+            "Interview preparation",
+            "Mock interviews",
+            "Placement assistance"
+          ]
+        }
+      ],
+      requirements: [
+        "Diploma or degree in Mechanical Engineering (or pursuing final year)",
+        "Basic computer knowledge",
+        "Willingness to learn"
+      ],
+      outcomes: [
+        "Crack core mechanical job interviews",
+        "Gain practical industry skills",
+        "Build a strong resume & portfolio",
+        "Work in production, quality, or design roles",
+        "Get placement assistance in reputed companies"
+      ]
+    },
     9: {
       title: "BSc Nursing Course",
       subtitle: "Mastering Nursing Jobs in Indian Hospitals",
@@ -146,6 +512,7 @@ const CourseDetail = () => {
       language: "Hindi & English",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
       category: "Healthcare",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkEzYm9PTePejB",
       features: [
         "Certificate after completion",
         "Free AI tool assistance (Hindi & English)",
@@ -185,6 +552,173 @@ const CourseDetail = () => {
         "Provide quality patient care",
         "Work in various departments",
         "Advance in nursing career"
+      ]
+    },
+    10: {
+      title: "AI, Machine Learning, and Data Science",
+      subtitle: "AI, ML & Data Science Mastery",
+      description:
+        "Cutting-edge course on artificial intelligence, machine learning, and data science applications. Includes Python, ML algorithms, and real-world projects.",
+      duration: "150 hours",
+      price: "₹19,999",
+      originalPrice: "₹50,000",
+      rating: 4.9,
+      students: 1650,
+      instructor: "Dr. Amit Kumar",
+      level: "Intermediate to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      category: "Technology",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkbfT6omfXOa6v",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Mock interviews and interview questions",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "Project-based learning"
+      ],
+      curriculum: [
+        {
+          title: "Python & Data Science",
+          topics: [
+            "Python basics",
+            "Data analysis",
+            "Visualization"
+          ]
+        },
+        {
+          title: "Machine Learning",
+          topics: [
+            "Supervised & unsupervised learning",
+            "Regression & classification",
+            "Model evaluation"
+          ]
+        },
+        {
+          title: "AI Applications",
+          topics: [
+            "Real-world AI projects",
+            "Deployment",
+            "Industry use-cases"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic programming knowledge",
+        "Interest in AI/ML",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Build ML models",
+        "Analyze data",
+        "Work in AI/ML roles"
+      ]
+    },
+    11: {
+      title: "Cybersecurity and Ethical Hacking",
+      subtitle: "Become a Cybersecurity Expert",
+      description:
+        "Learn cybersecurity fundamentals and ethical hacking techniques for digital security. Includes hands-on labs, penetration testing, and real-world scenarios.",
+      duration: "100 hours",
+      price: "₹19,999",
+      originalPrice: "₹40,000",
+      rating: 4.8,
+      students: 1200,
+      instructor: "Rahul Verma",
+      level: "Intermediate to Advanced",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
+      category: "Technology",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkbVQMoRjk8O3c",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Mock interviews and interview questions",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "Live hacking sessions"
+      ],
+      curriculum: [
+        {
+          title: "Cybersecurity Basics",
+          topics: [
+            "Network security",
+            "Threat analysis",
+            "Firewalls & VPNs"
+          ]
+        },
+        {
+          title: "Ethical Hacking",
+          topics: [
+            "Penetration testing",
+            "Vulnerability assessment",
+            "Real-world hacking scenarios"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic computer knowledge",
+        "Interest in cybersecurity",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Work as cybersecurity analyst",
+        "Perform penetration testing",
+        "Protect digital assets"
+      ]
+    },
+    12: {
+      title: "Real Estate Course",
+      subtitle: "Job-Oriented Real Estate Training",
+      description:
+        "Comprehensive real estate course for jobs in Dubai, Delhi NCR, Chandigarh, and Jaipur. Learn property sales, client management, legalities, and more.",
+      duration: "80 hours",
+      price: "₹19,999",
+      originalPrice: "₹30,000",
+      rating: 4.7,
+      students: 950,
+      instructor: "Kapil Sharma",
+      level: "Beginner to Intermediate",
+      language: "Hindi & English",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+      category: "Business",
+      paymentLink: "https://razorpay.com/payment-link/plink_QkD0vcwaw7q9N8",
+      features: [
+        "Certificate after completion",
+        "Free AI tool assistance (Hindi & English)",
+        "Mock interviews and interview questions",
+        "Assured paid 30-day internship",
+        "Assured job in reputed firm",
+        "Industry expert sessions"
+      ],
+      curriculum: [
+        {
+          title: "Real Estate Fundamentals",
+          topics: [
+            "Property sales process",
+            "Client management",
+            "Legal documentation"
+          ]
+        },
+        {
+          title: "Market & Job Preparation",
+          topics: [
+            "Market analysis",
+            "Interview preparation",
+            "Job search strategies"
+          ]
+        }
+      ],
+      requirements: [
+        "Basic communication skills",
+        "Interest in real estate",
+        "Laptop/PC"
+      ],
+      outcomes: [
+        "Work in real estate sector",
+        "Crack interviews",
+        "Understand property sales"
       ]
     }
   };
@@ -250,19 +784,21 @@ const CourseDetail = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => setIsPaymentModalOpen(true)}
+                <a
+                  href={course.paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center justify-center"
                 >
                   <Play className="mr-2 w-5 h-5" />
                   Enroll Now - {course.price}
-                </button>
+                </a>
                 <Link
                   to="/contact"
                   className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center justify-center"
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
-                  Get Free Consultation
+                  Get Consultation
                 </Link>
               </div>
             </div>
@@ -408,12 +944,14 @@ const CourseDetail = () => {
                   ))}
                 </div>
                 
-                <button
-                  onClick={() => setIsPaymentModalOpen(true)}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105"
+                <a
+                  href={course.paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105 text-center block"
                 >
                   Enroll Now
-                </button>
+                </a>
               </div>
 
               {/* Instructor */}
@@ -474,12 +1012,14 @@ const CourseDetail = () => {
             Join thousands of students who have transformed their careers with our premium courses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => setIsPaymentModalOpen(true)}
+            <a
+              href={course.paymentLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Enroll Now - {course.price}
-            </button>
+            </a>
             <Link
               to="/contact"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
@@ -502,4 +1042,4 @@ const CourseDetail = () => {
   );
 };
 
-export default CourseDetail; 
+export default CourseDetail;
