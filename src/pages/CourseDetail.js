@@ -794,7 +794,7 @@ const CourseDetail = () => {
                   Enroll Now - {course.price}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/get-consultation"
                   className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center justify-center"
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
