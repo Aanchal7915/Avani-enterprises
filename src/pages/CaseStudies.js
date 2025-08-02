@@ -414,7 +414,7 @@ const CaseStudies = () => {
               Start Your Project
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+919253625099"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Call Us Now

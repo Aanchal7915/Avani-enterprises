@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-1">
             <img 
               src="/avani_enter_logo.png" 
               alt="Avani Enterprises" 
@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -58,7 +58,6 @@ const Navbar = () => {
             ))}
           </div>
 
-
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -68,16 +67,16 @@ const Navbar = () => {
               <Phone size={16} />
               <span className="text-sm font-medium">+91 9253625099</span>
             </a>
-            {/* <Link
-              to="/contact"
+            <Link
+              to="/get-consultation"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-200 hover:scale-105"
             >
-              Get Started
-            </Link> */}
+              Get Consultation
+            </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 transition-colors"
@@ -89,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
                 <Link
@@ -113,13 +112,13 @@ const Navbar = () => {
                   <Phone size={16} />
                   <span className="text-sm font-medium">+91 9253625099</span>
                 </a>
-                {/* <Link
-                  to="/contact"
-                  className="block mt-2 mx-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium text-center"
+                <Link
+                  to="/get-consultation"
+                  className="block mt-2 mx-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium text-center w-[200px]"
                   onClick={() => setIsOpen(false)}
                 >
-                  Get Started
-                </Link> */}
+                  Get Consultation
+                </Link>
               </div>
             </div>
           </div>
@@ -129,4 +128,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
