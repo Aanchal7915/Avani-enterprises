@@ -5,7 +5,6 @@ import {
   MapPin, 
   Clock, 
   Send,
-  CheckCircle,
   MessageSquare
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
@@ -19,8 +18,8 @@ const Contact = () => {
     service: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

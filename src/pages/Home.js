@@ -2,13 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Play, 
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  Award,
+  Play,
   Globe,
-  Smartphone,
   Search,
   Share2,
   Brain,

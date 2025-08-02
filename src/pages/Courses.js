@@ -7,22 +7,12 @@ import {
   Star,
   ArrowRight,
   CheckCircle,
-  Play,
   BookOpen,
   Code,
   Palette,
-  Video,
-  Smartphone,
-  Building,
   Briefcase,
-  Scale,
-  Heart,
-  Calculator,
   Brain,
-  Shield,
-  Home,
   Search,
-  Filter
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PaymentModal from '../components/PaymentModal';

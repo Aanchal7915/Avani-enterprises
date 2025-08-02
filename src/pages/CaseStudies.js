@@ -3,7 +3,6 @@ import {
   TrendingUp, 
   Users, 
   Globe, 
-  Smartphone,
   Search,
   Share2,
   Brain,
@@ -12,7 +11,6 @@ import {
   ArrowRight,
   Star,
   Calendar,
-  DollarSign
 } from 'lucide-react';
 
 const CaseStudies = () => {

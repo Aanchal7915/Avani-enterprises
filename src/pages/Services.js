@@ -11,8 +11,7 @@ import {
   ArrowRight,
   Star,
   Clock,
-  Users,
-  TrendingUp
+  Users
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 

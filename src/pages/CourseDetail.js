@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   Clock, 
   Users, 
   Star, 
   CheckCircle, 
-  ArrowRight,
   Play,
   BookOpen,
   Briefcase,
-  Brain,
-  Calendar,
-  MapPin,
   Phone,
   Mail,
   MessageSquare,
-  ChevronDown,
-  ChevronUp
 } from 'lucide-react';
 import PaymentModal from '../components/PaymentModal';
 
@@ -24,7 +18,7 @@ const CourseDetail = () => {
   const { id } = useParams();
   const [activeTab, setActiveTab] = useState('overview');
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
-  const [isEnrolled, setIsEnrolled] = useState(false);
+  // const [isEnrolled, setIsEnrolled] = useState(false);
 
   // Course data - in a real app, this would come from an API
   const courseData = {
