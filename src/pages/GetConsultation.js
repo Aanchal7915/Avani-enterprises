@@ -18,52 +18,54 @@ const GetConsultation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.open('"https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"', '_blank');
+    setIsPaying(true);
+    window.open('https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN', '_blank');
     setFormData({
       name: "",
       email: "",
       phone: ""
     })
-    setIsPaying(true);
+    setIsPaying(false)
+    
 
-    const options = {
-      key: razorpayKey,
-      amount: amount,
-      currency: "INR",
-      name: "Avani Enterprises",
-      description: "Consultation Fee",
-      image: "/logo192.png",
-      handler: function (response) {
-        setIsPaying(false);
-        alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
-      },
-      prefill: {
-        name: formData.name,
-        email: formData.email,
-        contact: formData.phone
-      },
-      theme: {
-        color: "#7c3aed"
-      },
-      modal: {
-        ondismiss: () => setIsPaying(false)
-      }
-    };
+  //   const options = {
+  //     key: razorpayKey,
+  //     amount: amount,
+  //     currency: "INR",
+  //     name: "Avani Enterprises",
+  //     description: "Consultation Fee",
+  //     image: "/logo192.png",
+  //     handler: function (response) {
+  //       setIsPaying(false);
+  //       alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+  //     },
+  //     prefill: {
+  //       name: formData.name,
+  //       email: formData.email,
+  //       contact: formData.phone
+  //     },
+  //     theme: {
+  //       color: "#7c3aed"
+  //     },
+  //     modal: {
+  //       ondismiss: () => setIsPaying(false)
+  //     }
+  //   };
 
-    const rzp = new window.Razorpay(options);
-    rzp.open();
+  //   const rzp = new window.Razorpay(options);
+  //   rzp.open();
   };
 
-  // Load Razorpay script
-  React.useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://checkout.razorpay.com/v1/checkout.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  // // Load Razorpay script
+  // React.useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://checkout.razorpay.com/v1/checkout.js";
+  //   script.async = true;
+  //   document.body.appendChild(script);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <div
