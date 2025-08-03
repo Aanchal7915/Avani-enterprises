@@ -1020,14 +1020,12 @@ const CourseDetail = () => {
             >
               Enroll Now - {course.price}
             </a>
-            <a
-              href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
-               target='_blank'
-              rel="noopener noreferrer"
+            <Link
+              to="/get-consultation"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Get Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

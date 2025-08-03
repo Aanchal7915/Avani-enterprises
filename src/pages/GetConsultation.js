@@ -10,7 +10,7 @@ const GetConsultation = () => {
 
   // Get Razorpay key and amount from environment variables
   const razorpayKey = process.env.REACT_APP_RAZORPAY_KEY;
-  const amount = Number(process.env.REACT_APP_RAZORPAY_CONSULTATION_AMOUNT_) || 50000; // fallback to 50000 paise (₹500)
+  const amount = Number(process.env.REACT_APP_RAZORPAY_CONSULTATION_AMOUNT_) || 4999; // fallback to 50000 paise (₹500)
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -182,7 +182,14 @@ const GetConsultation = () => {
                   Redirecting to Payment...
                 </>
               ) : (
-                <>Pay ₹{(amount).toLocaleString("en-IN")} & Book Consultation</>
+                
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
+                >
+                  Pay ₹{(amount).toLocaleString("en-IN")} & Book Consultation
+                </a>
               )}
             </button>
           </form>

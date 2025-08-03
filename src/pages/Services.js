@@ -385,14 +385,12 @@ const Services = () => {
             Let's discuss your project requirements and create a custom solution that fits your budget and timeline.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
-               target='_blank'
-              rel="noopener noreferrer"
+            <Link
+             to="/get-consultation"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Get Consultation
-            </a>
+            </Link>
             <a
               href="tel:+919253625099"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"

@@ -67,14 +67,12 @@ const Navbar = () => {
               <Phone size={16} />
               <span className="text-sm font-medium">+91 9253625099</span>
             </a>
-            <a
-              href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
-               target='_blank'
-              rel="noopener noreferrer"
+            <Link
+              to="/get-consultation"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-200 hover:scale-105"
             >
               Get Consultation
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -114,15 +112,13 @@ const Navbar = () => {
                   <Phone size={16} />
                   <span className="text-sm font-medium">+91 9253625099</span>
                 </a>
-                <a
-                  href="/https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
-                   target='_blank'
-                    rel="noopener noreferrer"
+                <Link
+                  to="/get-consultation"
                   className="block mt-2 mx-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium text-center w-[200px]"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Consultation
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -8,7 +8,6 @@ import {
   Brain,
   Mic,
   Calculator,
-  ArrowRight,
   Star,
   Calendar,
 } from 'lucide-react';
@@ -268,10 +267,10 @@ const CaseStudies = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center justify-center">
+                  {/* <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center justify-center">
                     View Full Case Study
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

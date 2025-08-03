@@ -273,10 +273,10 @@ html {
 }
 
 /* Custom focus styles for accessibility */
-*:focus {
+/* *:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-}
+} */
 
 /* Custom selection color */
 ::selection {
