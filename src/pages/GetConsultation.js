@@ -18,6 +18,12 @@ const GetConsultation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    window.open('"https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"', '_blank');
+    setFormData({
+      name: "",
+      email: "",
+      phone: ""
+    })
     setIsPaying(true);
 
     const options = {
@@ -183,13 +189,9 @@ const GetConsultation = () => {
                 </>
               ) : (
                 
-                <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://razorpay.com/payment-link/plink_Qj3KCQT62VWolN"
-                >
+                <>
                   Pay ₹{(amount).toLocaleString("en-IN")} & Book Consultation
-                </a>
+                </>
               )}
             </button>
           </form>
