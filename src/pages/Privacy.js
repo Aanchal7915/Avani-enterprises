@@ -77,8 +77,7 @@ const PolicyPage = () => {
             <li>
               <span className="font-medium text-gray-800">Technical & Usage Data:</span> IP address, browser type, and usage patterns (collected via website analytics).
             </li>
-            <li>
-            </li>
+            
           </ul>
 
           <h3 className="text-2xl font-semibold text-indigo-700 mt-8 mb-3">Sharing Your Personal Data (Third Parties)</h3>
