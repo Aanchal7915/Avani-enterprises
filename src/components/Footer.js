@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <img 
-                src="/Untitled-design-1.png" 
+                src="/logo0.jpg" 
                 alt="Avani Enterprises" 
-                className="h-10 w-auto"
+                className="h-[70px] w-[70px] rounded-full"
               />
               {/* <span className="text-xl font-bold">Avani Enterprises</span> */}
             </div>
@@ -126,8 +126,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-blue-400 flex-shrink-0" />
-                <a href="mailto:kapilatavanienterprises@gmail.com" className="text-gray-300 hover:text-white transition-colors">
-                  kapilatavanienterprises@gmail.com
+                <a href="mailto:kp@avanienterprises.in" className="text-gray-300 hover:text-white transition-colors">
+                  kp@avanienterprises.in
                 </a>
               </div>
             </div>

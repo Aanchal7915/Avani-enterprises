@@ -34,9 +34,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-1">
             <img 
-              src="/avani_enter_logo.png" 
+              src="/logo0.jpg" 
               alt="Avani Enterprises" 
-              className="h-10 w-auto"
+              className=" h-[70px] w-[70px] rounded-full"
             />
             {/* <span className="text-xl font-bold text-gray-900">Avani Enterprises</span> */}
           </Link>
