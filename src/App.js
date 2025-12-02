@@ -15,6 +15,7 @@ import CourseDetail from './pages/CourseDetail';
 import ScrollToTop from './components/ScrollToTop';
 import GetConsultation from './pages/GetConsultation';
 import NotFound from './pages/NotFound';
+import PolicyPage from './pages/Privacy';
 const App = () => {
   return (
 
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
             <Route path="/get-consultation" element={<GetConsultation />} />
+            <Route path="/privacy-policy" element={<PolicyPage />} />
             <Route path="/not-found" element={<NotFound/>} />
             <Route path="*" element={<Navigate to="/not-found"/>} />
           </Routes>
