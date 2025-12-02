@@ -23,7 +23,6 @@ const Navbar = () => {
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Privacy Policy', path: '/privacy-policy' },
   ];
 
   return (

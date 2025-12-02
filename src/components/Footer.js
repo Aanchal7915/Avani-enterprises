@@ -100,7 +100,16 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-             
+               <li>
+    <Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
+      Privacy Policy
+    </Link>
+  </li>
+  <li>
+    <Link to="/terms-and-conditions" className="text-gray-300 hover:text-white transition-colors">
+      Terms & Conditions
+    </Link>
+  </li>
             </ul>
           </div>
 
@@ -156,3 +165,5 @@ const Footer = () => {
 };
 
 export default Footer; 
+
+
