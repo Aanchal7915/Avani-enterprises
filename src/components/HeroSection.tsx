@@ -164,20 +164,23 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 + index * 0.1 }}
-              className="text-center p-6 rounded-2xl glass"
-            >
-              <div className="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </motion.div>
-          ))}
+          {stats.map((stat, index) => {
+            const colors = ["text-blue-500", "text-green-500", "text-orange-500", "text-purple-500"];
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 + index * 0.1 }}
+                className="text-center p-6"
+              >
+                <div className={`text-4xl md:text-5xl font-bold mb-2 ${colors[index]}`}>
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

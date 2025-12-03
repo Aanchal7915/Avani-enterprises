@@ -83,11 +83,13 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group relative p-8 rounded-2xl glass card-shadow hover:border-primary/50 transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-card/80 border border-border/50 hover:border-primary/50 transition-all duration-300"
             >
               {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-7 h-7 text-white" />
+              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} p-[2px] mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
               </div>
 
               {/* Content */}
