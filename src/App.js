@@ -17,6 +17,13 @@ import GetConsultation from './pages/GetConsultation';
 import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/privacypolicy';
 import TermsConditions from './pages/termsnandcondition';
+
+function ExternalRedirect() {
+  window.location.href = "https://avani-connect-glow.vercel.app/";
+  return null;
+}
+
+
 const App = () => {
   return (
 
@@ -37,8 +44,15 @@ const App = () => {
             <Route path="/courses/:id" element={<CourseDetail />} />
             <Route path="/get-consultation" element={<GetConsultation />} />
             <Route path="/not-found" element={<NotFound/>} />
-             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-  <Route path="/terms-and-conditions" element={<TermsConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
+            <Route
+              path="/web-dev"
+              element={
+                <ExternalRedirect
+                />
+              }
+            />
             <Route path="*" element={<Navigate to="/not-found"/>} />
           </Routes>
         </main>
