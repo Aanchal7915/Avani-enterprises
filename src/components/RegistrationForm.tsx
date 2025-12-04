@@ -38,6 +38,8 @@ const RegistrationForm = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [apiError, setApiError] = useState<string | null>(null);
+
   const [formData, setFormData] = useState<Partial<FormData>>({
     name: "",
     email: "",
@@ -45,6 +47,7 @@ const RegistrationForm = () => {
     service: "",
     consent: false,
   });
+
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
 
   const validateField = (field: keyof FormData, value: unknown) => {
@@ -61,27 +64,48 @@ const RegistrationForm = () => {
     }
   };
 
+  // ***************************************
+  // UPDATED handleSubmit WITH API CALL
+  // ***************************************
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setApiError(null);
 
-    try {
+    try{
       const validatedData = formSchema.parse(formData);
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
+
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/submit-form`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(validatedData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setApiError(result?.message || "Something went wrong. Try again.");
+        toast({
+          title: "Submission Failed",
+          description: result?.message || "Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
       toast({
         title: "Form submitted successfully!",
         description: "We'll get back to you soon.",
       });
-      
-      // Navigate to thank you page
-      navigate("/thank-you", { 
-        state: { 
+
+      navigate("/thank-you", {
+        state: {
           name: validatedData.name,
-          service: validatedData.service 
-        } 
+          service: validatedData.service,
+        },
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -91,11 +115,14 @@ const RegistrationForm = () => {
           newErrors[field] = err.message;
         });
         setErrors(newErrors);
+
         toast({
           title: "Please check the form",
           description: "Some fields require your attention.",
           variant: "destructive",
         });
+      } else {
+        setApiError("Unexpected error. Please try again.");
       }
     } finally {
       setIsLoading(false);
@@ -104,14 +131,12 @@ const RegistrationForm = () => {
 
   return (
     <section id="contact" className="py-24 relative">
-      {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto">
-          {/* Card Container */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,14 +144,11 @@ const RegistrationForm = () => {
             transition={{ duration: 0.6 }}
             className="relative rounded-3xl overflow-hidden"
           >
-            {/* Green Gradient Border */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-primary/60 via-primary/30 to-primary/60 p-[2px]">
               <div className="w-full h-full rounded-3xl bg-background" />
             </div>
 
-            {/* Content */}
             <div className="relative">
-              {/* Header */}
               <div className="bg-gradient-to-b from-card to-background p-8 pb-6 text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
@@ -148,10 +170,9 @@ const RegistrationForm = () => {
                 </motion.p>
               </div>
 
-              {/* Form */}
               <div className="bg-card/50 backdrop-blur-sm p-8">
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Name Field */}
+                  {/* Name */}
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">
                       <User className="w-5 h-5" />
@@ -170,7 +191,7 @@ const RegistrationForm = () => {
                     )}
                   </div>
 
-                  {/* Email Field */}
+                  {/* Email */}
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">
                       <Mail className="w-5 h-5" />
@@ -190,7 +211,7 @@ const RegistrationForm = () => {
                     )}
                   </div>
 
-                  {/* Phone Field */}
+                  {/* Phone */}
                   <div className="flex gap-3">
                     <div className="w-24 flex-shrink-0">
                       <Select defaultValue="+91">
@@ -204,6 +225,7 @@ const RegistrationForm = () => {
                         </SelectContent>
                       </Select>
                     </div>
+
                     <div className="flex-1 relative">
                       <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">
                         <Phone className="w-5 h-5" />
@@ -224,7 +246,7 @@ const RegistrationForm = () => {
                     <p className="text-destructive text-sm -mt-3">{errors.phone}</p>
                   )}
 
-                  {/* Service Select */}
+                  {/* Service */}
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground z-10 pointer-events-none">
                       <Briefcase className="w-5 h-5" />
@@ -252,7 +274,7 @@ const RegistrationForm = () => {
                     )}
                   </div>
 
-                  {/* Consent Checkbox */}
+                  {/* Consent */}
                   <div className="flex items-start gap-3">
                     <Checkbox
                       id="consent"
@@ -267,7 +289,7 @@ const RegistrationForm = () => {
                       htmlFor="consent"
                       className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
                     >
-                      I agree to receive information regarding my submitted application 
+                      I agree to receive information regarding my submitted application
                       and updates from Avani Enterprises *
                     </label>
                   </div>
@@ -295,6 +317,13 @@ const RegistrationForm = () => {
                       </span>
                     )}
                   </Button>
+
+                  {/* API ERROR BELOW BUTTON */}
+                  {apiError && (
+                    <p className="text-destructive text-sm text-center mt-2">
+                      {apiError}
+                    </p>
+                  )}
                 </form>
               </div>
             </div>
