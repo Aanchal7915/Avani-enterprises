@@ -34,14 +34,14 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen">
-        <Navbar />
+        {/* <Navbar /> */}
         <main>
           <HeroSection />
           <ServicesSection />
           <PortfolioSection />
           <RegistrationForm />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
