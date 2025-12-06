@@ -18,8 +18,8 @@ import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/privacypolicy';
 import TermsConditions from './pages/termsnandcondition';
 
-function ExternalRedirect() {
-  window.location.href = "https://avani-connect-glow.vercel.app/";
+function ExternalRedirect({href}) {
+  window.location.href = href;
   return null;
 }
 
@@ -49,7 +49,14 @@ const App = () => {
             <Route
               path="/web-dev"
               element={
-                <ExternalRedirect
+                <ExternalRedirect href="https://avani-connect-glow.vercel.app/"
+                />
+              }
+            />
+            <Route
+              path="/admin-login"
+              element={
+                <ExternalRedirect href="https://avani-enterprises-admin-frontend.vercel.app/"
                 />
               }
             />
